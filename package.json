@@ -1,0 +1,79 @@
+{
+  "name": "rahui",
+  "version": "0.2.0",
+  "description": "rahui",
+  "repository": "https://github.com/dev-academy-challenges/show-me-the-money.git",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "run-p watch:client watch:server",
+    "watch:client": "webpack --watch",
+    "watch:server": "nodemon --watch server",
+    "start": "node server",
+    "test": "jest --noStackTrace --watchAll",
+    "postinstall": "webpack && knex migrate:latest",
+    "h:deploy": "git push heroku master",
+    "h:migrate": "heroku run npx knex migrate:latest",
+    "h:rollback": "heroku run npx knex migrate:rollback",
+    "h:seed": "heroku run npx knex seed:run"
+  },
+  "author": "EDA",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "nodemon": "^1.19.0",
+    "sqlite3": "^4.0.6",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "bcrypt": "^3.0.6",
+    "bootstrap": "^4.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-jwt": "^5.3.1",
+    "google-maps-react": "^2.0.2",
+    "jest": "^24.7.1",
+    "jsdom": "^15.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "jsx-loader": "^0.13.2",
+    "jwt-decode": "^2.2.0",
+    "knex": "^0.16.5",
+    "npm-run-all": "^4.1.5",
+    "passport": "^0.4.0",
+    "pg": "^7.10.0",
+    "react": "^16.8.6",
+    "react-compound-timer": "^1.0.13",
+    "react-dom": "^16.8.6",
+    "react-google-maps": "^9.4.5",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "react-scroll": "^1.7.11",
+    "react-splitter-layout": "^4.0.0",
+    "react-test-renderer": "^16.8.6",
+    "recompose": "^0.30.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "superagent": "^5.0.5",
+    "victory": "^32.2.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}

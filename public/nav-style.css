@@ -1,0 +1,257 @@
+      @import url("https://fonts.googleapis.com/css?family=Rasa&display=swap");
+      @import url('https://fonts.googleapis.com/css?family=Rasa:300,400,500,600&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+.translate-icon{
+  position: absolute;
+  top: 1.2em;
+  left: 10em;
+  width: 9em;
+  transform: translate(-50%, -50%); 
+}
+
+.translate-icon a{
+  font-family: 'Rasa';
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: .07em;
+  text-decoration: none;
+  color: #F1ECE8;
+  transition: all 0.5s ease;
+}
+
+.translate-icon a:hover{
+  color: #DC5757;
+  letter-spacing: .09em;
+}
+
+.rahuitia-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #F1ECE8;
+}
+
+.rahuitia-logo a{
+    float: left;
+    text-decoration: none;
+    color: #F1ECE8;
+    font-size: 1.3em;
+    padding: .3em;
+    transition: all 0.5s ease;
+}
+
+.rahuitia-logo a:hover{
+    float: left;
+    text-decoration: none;
+    font-size: 1.34em;
+    letter-spacing: .03em;
+    padding: .3em;
+}
+
+@media (min-width:50em){
+
+
+#nav {
+    background-color:#434734;
+    color: #F1ECE8;
+    box-shadow: 1px 3px 4px 0 rgba(0,0,0,.15);
+    height: 2.4em;
+    z-index: 220;
+    position:fixed;
+    width:100vw;
+}
+
+#nav ul li {
+    margin:0;
+    padding:0;
+    display: block;
+    float:right;
+    list-style:none;
+    overflow:hidden;
+}
+
+.nav-links {
+    color: #F1ECE8;
+    display: block;
+    padding: .57em;
+    text-decoration: none;
+    background-color: #434734;
+    transition: all 0.3s ease-out;
+}
+
+.nav-links:hover{
+    color: #434734;
+    text-decoration: none;
+    background-color: #F1ECE8;
+}
+
+.ToggleLanguageButton{
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(230, 216, 216);
+  display: block;
+  font-size: 1em;
+  letter-spacing: .01em;
+  text-decoration: none;
+  transition: all 1s ease;
+}
+
+.ToggleLanguageButton:hover{
+  color: rgb(220, 190, 190);
+  font-size: 1.27em;
+  letter-spacing: .02em;
+}
+
+#close {
+    display: none;
+}
+
+}
+
+@media (max-width:50em){
+
+  .translate-icon {
+    left: 10em;
+  }
+
+  .translate-icon a{
+    color: rgb(230, 216, 216);
+  }
+
+
+
+      #nav {
+        font-family: 'Rasa';
+        position: absolute;
+        box-shadow: 1px 3px 4px 0 rgba(0,0,0,.15);
+        z-index: 220;
+        top: 0;
+        left: 0;
+        height: 2.4em;
+        width: 100%;
+        background-color: #434734;
+        transition: all 0.5s ease;
+      }
+      #nav #close {
+        position: absolute;
+        top: 25px;
+        right: 0;
+        transform: translateY(-25px);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+      }
+      #nav #close .bar {
+        position: absolute;
+        width: 50%;
+        height: 3px;
+        background-color: #F1ECE8;
+        transition: all 0.5s ease;
+      }
+      #nav #close .bar:first-of-type {
+        top: 42%;
+        height: 3px;
+      }
+      #nav #close .bar:last-of-type {
+        top: 58%;
+        height: 3px;
+      }
+      #nav #nav-items {
+        visibility: hidden;
+        padding-top: 50px;
+        transition: all 0.5s ease;
+      }
+      #nav #nav-items ul {
+        list-style: none;
+        margin: 0 2rem;
+      }
+      #nav #nav-items ul li {
+        opacity: 0;
+        font-size: 1.4rem;
+        padding: 0.75rem 0;
+      }
+      #nav #nav-items ul li a {
+        text-decoration: none;
+        color: #F1ECE8;
+        transition: all 0.5s ease;
+      }
+      #nav #nav-items ul li a:hover {
+        text-decoration: none;
+        color: rgb(220, 181, 181);
+      }
+      #nav #nav-items ul li:not(:last-of-type) {
+        border-bottom: .055em solid rgb(210, 207, 204);
+      }
+      #nav #nav-items ul li:nth-child(1) {
+        transition: opacity 0.5s ease;
+        transition-delay: 0.1s;
+      }
+      #nav #nav-items ul li:nth-child(2) {
+        transition: opacity 0.5s ease;
+        transition-delay: 0.2s;
+      }
+      #nav #nav-items ul li:nth-child(3) {
+        transition: opacity 0.5s ease;
+        transition-delay: 0.3s;
+      }
+      #nav #nav-items ul li:nth-child(4) {
+        transition: opacity 0.5s ease;
+        transition-delay: 0.4s;
+      }
+      #nav #nav-items ul li:nth-child(5) {
+        transition: opacity 0.5s ease;
+        transition-delay: 0.5s;
+      }
+      #nav #nav-items ul li:nth-child(6) {
+        transition: opacity 0.5s ease;
+        transition-delay: 0.6s;
+      }
+      #nav #nav-items ul li:nth-child(7) {
+        transition: opacity 0.5s ease;
+        transition-delay: 0.7s;
+      }
+      #nav #nav-items ul li:nth-child(8) {
+        transition: opacity 0.5s ease;
+        transition-delay: 0.8s;
+      }
+      #nav #nav-items ul li:nth-child(9) {
+        transition: opacity 0.5s ease;
+        transition-delay: 0.9s;
+      }
+      #nav #nav-items ul li:nth-child(10) {
+        transition: opacity 0.5s ease;
+        transition-delay: 1s;
+      }
+      #nav.active {
+        background-color: #434734;
+        height: 100vh;
+      }
+      #nav.active #close .bar {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      #nav.active #close .bar:first-of-type {
+        transform: rotate(225deg);
+      }
+      #nav.active #close .bar:last-of-type {
+        transform: rotate(-225deg);
+      }
+      #nav.active #nav-items {
+        visibility: visible;
+      }
+      #nav.active #nav-items ul li {
+        opacity: 1;
+      }
+
+}
