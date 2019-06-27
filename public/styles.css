@@ -1036,6 +1036,23 @@ map {
   font-size: .95em;
 }
 
+#project {
+  width: 33.33%;
+  text-align: left;
+  padding-left: 0;
+}
+
+#team{
+  width: 33.33%;
+  text-align: center;
+}
+
+#API{
+  width: 33.33%; 
+  text-align: right; 
+  padding-right: 0;
+}
+
 .explore-button-selected {
   width: 25%;
   letter-spacing: .05em;
@@ -1306,19 +1323,18 @@ map {
 }
 
 #project {
-  width: 26vw;
+  width: 45vw;
+  text-align: center;
 }
 
 #team{
-  width: 22vw;
+  width: 30vw;
+  text-align: center;
 }
 
 #API{
-  width: 19vw;  
-}
-
-#resources{
-  width: 33vw;
+  width: 25vw;
+  text-align: center;  
 }
 
 
