@@ -1325,16 +1325,19 @@ map {
 #project {
   width: 45vw;
   text-align: center;
+  font-size: .7em;
 }
 
 #team{
   width: 30vw;
   text-align: center;
+  font-size: .7em;
 }
 
 #API{
   width: 25vw;
-  text-align: center;  
+  text-align: center; 
+  font-size: .7em; 
 }
 
 
