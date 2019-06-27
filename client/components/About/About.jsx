@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Project from "./Project/Project";
 import Team from "./Team/Team";
-import Resources from "./Resourses/Resourses"
 import API from "./API/Api"
 
 export class About extends Component {
@@ -41,14 +40,12 @@ export class About extends Component {
               <button id="project" className={this.state.visibility == "project" ? "explore-button-selected" : "explore-button-deselected"} value="project" onClick={this.handleClick}>Project</button>
               <button id="team" className={this.state.visibility == "team" ? "explore-button-selected" : "explore-button-deselected"} value="team" onClick={this.handleClick}>Team</button>
               <button id="API" className={this.state.visibility == "API" ? "explore-button-selected" : "explore-button-deselected"} value="API" onClick={this.handleClick}>API</button>
-              <button id="resources" className={this.state.visibility == "resources" ? "explore-button-selected" : "explore-button-deselected"} value="resources" onClick={this.handleClick}>Resources</button>
             </div>
             :
             <div className="aboutnav">
               <button id="project" className={this.state.visibility == "project" ? "explore-button-selected" : "explore-button-deselected"} value="project" onClick={this.handleClick}>Whakatakanga</button>
               <button id="team" className={this.state.visibility == "team" ? "explore-button-selected" : "explore-button-deselected"} value="team" onClick={this.handleClick}>Tima</button>
               <button id="API" className={this.state.visibility == "API" ? "explore-button-selected" : "explore-button-deselected"} value="API" onClick={this.handleClick}>API</button>
-              <button id="resources" className={this.state.visibility == "resources" ? "explore-button-selected" : "explore-button-deselected"} value="resources" onClick={this.handleClick}>Rauemi Ipurangi</button>
             </div>
           }
 
@@ -58,8 +55,6 @@ export class About extends Component {
             {this.state.visibility == "team" && <Team />
             }
             {this.state.visibility == "API" && <API />
-            }
-            {this.state.visibility == "resources" && <Resources />
             }
           </div>
         </div>

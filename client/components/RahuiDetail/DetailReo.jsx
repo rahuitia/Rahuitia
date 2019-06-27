@@ -48,8 +48,8 @@ class DetailReo extends Component {
 
     return (
       <React.Fragment>
+      <button className="backToList" onClick={this.handleClickExplore.bind(this)}><img src="expand.svg"/></button>
         <div className="mapBackground" style={this.state.visibility == "map" ? { zIndex: 81 } : { zIndex: 71 }}>
-          <button className="backToList" onClick={this.handleClickExplore.bind(this)}> hoki ki te Rārangi </button>
           <NewMap color={"#2E86C1"} rahuiBounds={geo_ref} />
         </div>
         <div className="overlayNew" style={this.state.visibility == "list" ? { zIndex: 81 } : { zIndex: 71 }}>

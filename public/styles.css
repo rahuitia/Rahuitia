@@ -304,26 +304,38 @@ button :active {
 
 
 .backToList img {
-  width: 2em;
+  position: absolute;
+  width: 2.1em;
+  padding: .1em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s ease-in;
 } 
 
  .backToList {
    width: 3rem;
    height: 3rem;
-   border-radius: 2em;
+   border-radius: 2.3em;
    position: fixed;
-   top: 8.9em;
+   top: 10.9em;
    left: 50%;
-   transform: translate(-50%);
+   transform: translate(-50%, -50%);
    z-index: 201;
    background: #A3A87E;
    border: none;
    color: #F1ECE8;
+   transition: all .2s ease-in;
+ }
 
+ .backToList img:hover{
+  width: 2.5em;
+  transform: translate(-50%, -50%) rotate(90deg);;
  }
 
 .backToList:hover {
   border-style: none;
+  background: rgb(177, 181, 144);
 }
 
 .descriptionDetail {
