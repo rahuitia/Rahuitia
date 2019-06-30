@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
 import { getUserTokenInfo } from '../../utils/auth'
 import NewMap from '../NewMap'
-import TautokoEng from "../Tautoko/TautokoEng"
 import { fetchAllRahui } from "../../actions/rahui";
 
 
@@ -38,7 +37,6 @@ class DetailEng extends Component {
   }
 
   userId = () => {
-    console.log("One:", getUserTokenInfo() !== null ? getUserTokenInfo().user_id : 0)
     return getUserTokenInfo() !== null ? getUserTokenInfo().user_id : 0
   }
 
@@ -130,7 +128,6 @@ class DetailEng extends Component {
   }
 
   render() {
-    console.log(this.props)
     return this.props.rahui.length && this.renderDetail()
 
     // return this.props.rahui.length ? this.renderDetail() : this.renderLoading()

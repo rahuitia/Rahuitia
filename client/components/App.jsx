@@ -18,20 +18,12 @@ import Edit from "./Edit/EditFormAndMap";
 
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     page:null
-  //   }
-  // }
 
   componentDidMount() {
     this.props.dispatch(fetchAllRahui())
   }
 
   render() { 
-  let page = this.props;
-  console.log(page)
   return (
     <div>
       <Router>

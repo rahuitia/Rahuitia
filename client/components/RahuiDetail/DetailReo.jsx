@@ -38,12 +38,10 @@ class DetailReo extends Component {
   }
 
   userId = () => {
-    console.log("One:", getUserTokenInfo() !== null ? getUserTokenInfo().user_id : 0)
     return getUserTokenInfo() !== null ? getUserTokenInfo().user_id : 0
   }
 
   renderMap = (theOne) => {
-    console.log("the one: ", theOne)
     let { id, geo_ref, iwi_name, user_id, description, last_name, first_name, hapu_name, date_placed, date_lifted, korero, region, authoriser, contact, iwi, hapu } = theOne
 
     return (
@@ -131,7 +129,6 @@ class DetailReo extends Component {
   }
 
   render() {
-    console.log(this.props)
     return this.props.rahui.length && this.renderDetail()
 
     // return this.props.rahui.length ? this.renderDetail() : this.renderLoading()
