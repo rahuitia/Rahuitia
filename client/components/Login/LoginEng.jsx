@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux'
 import { loginUser, loginError } from '../../actions/login';
+// import { Redirect } from 'react-router-dom'
 
 class LoginEng extends Component {
   constructor(props) {
@@ -24,6 +25,8 @@ class LoginEng extends Component {
     let { email, password } = this.state
     this.props.dispatch(loginUser({ email, password }))
     window.location = `/#/explore`
+    // return <Redirect to='/explore' />
+    // window.location.replace("/#/explore");
   }
 
   render() {

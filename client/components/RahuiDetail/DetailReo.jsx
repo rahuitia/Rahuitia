@@ -46,7 +46,7 @@ class DetailReo extends Component {
 
     return (
       <React.Fragment>
-      <button className="backToList" onClick={this.handleClickExplore.bind(this)}><img src="expand.svg"/></button>
+      <button className="backToList" onClick={this.handleClickExplore.bind(this)}><img src="arrow.png"/></button>
         <div className="mapBackground" style={this.state.visibility == "map" ? { zIndex: 81 } : { zIndex: 71 }}>
           <NewMap color={"#2E86C1"} rahuiBounds={geo_ref} />
         </div>
