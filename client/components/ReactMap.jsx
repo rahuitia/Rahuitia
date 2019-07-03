@@ -79,7 +79,6 @@ const MapWithADrawingManager = compose(
           }
           arr.push(coordObj)
         }
-        console.log(arr)
         props.dispatch(saveCoordinates(arr))
       }}
     />

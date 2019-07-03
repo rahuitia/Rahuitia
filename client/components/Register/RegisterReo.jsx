@@ -49,11 +49,9 @@ class RegisterReo extends React.Component {
 
     if (confirm_password != password) {
       return this.props.dispatch(loginError("Passwords don't match"))
-      console.log("Login Error- Passwords dont match")
     } else {
       this.props.dispatch(registerUserRequest({ first_name, middle_name, last_name, address, email, password, iwi, hapu }))
     }
-    console.log("registered")
     window.location = `/#/addrahui`
   }
 
@@ -70,7 +68,6 @@ class RegisterReo extends React.Component {
       iwiSelected: null,
       hapuSelected: null
     })
-    console.log(this.state)
   }
 
   handleSelect(event) {

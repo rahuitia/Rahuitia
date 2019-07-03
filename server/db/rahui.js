@@ -45,7 +45,7 @@ function editRahui(
   contact,
   testDb
 ) {
-  // console.log( "id:", id, "region:", region, "iwi:", iwi,"hapu:", hapu, "description:", description, "Korero:", korero, "geo_ref:", geo_ref, "date_placed:", date_placed,"date_lifted:", date_lifted,"authoriser:", authoriser,"contact:", contact)
+
   const db = testDb || connection;
   return db("rahui")
     .where({ id: id })
@@ -71,12 +71,6 @@ function getRahui(testDb) {
 
 function getRahuiInformation(testDb) {
   const db = testDb || connection;
-
-  // console.log(db("rahui")
-  // .join("users", "rahui.user_id", "=", "users.id")
-  // .join("iwi", "rahui.user_id", "=", "iwi.user_id")
-  // .join("hapu", "rahui.user_id", "=", "hapu.user_id")
-  // .select("*", "rahui.id as rahui_id").toString())
 
   return db("rahui")
     .join("users", "rahui.user_id", "=", "users.id")
