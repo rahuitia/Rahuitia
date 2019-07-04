@@ -11,7 +11,6 @@ class RahuiListEng extends React.Component {
 
   render() {
 
-    console.log(this.props.allrahui)
     return (
       <React.Fragment>
         <h1>Explore Rāhui</h1>

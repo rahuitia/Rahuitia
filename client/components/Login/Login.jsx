@@ -19,7 +19,6 @@ class Login extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     auth: state.auth,
     lang: state.toggle

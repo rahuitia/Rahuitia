@@ -38,17 +38,15 @@ class DetailReo extends Component {
   }
 
   userId = () => {
-    console.log("One:", getUserTokenInfo() !== null ? getUserTokenInfo().user_id : 0)
     return getUserTokenInfo() !== null ? getUserTokenInfo().user_id : 0
   }
 
   renderMap = (theOne) => {
-    console.log("the one: ", theOne)
     let { id, geo_ref, iwi_name, user_id, description, last_name, first_name, hapu_name, date_placed, date_lifted, korero, region, authoriser, contact, iwi, hapu } = theOne
 
     return (
       <React.Fragment>
-      <button className="backToList" onClick={this.handleClickExplore.bind(this)}><img src="expand.svg"/></button>
+      <button className="backToList" onClick={this.handleClickExplore.bind(this)}><img src="arrow.png"/></button>
         <div className="mapBackground" style={this.state.visibility == "map" ? { zIndex: 81 } : { zIndex: 71 }}>
           <NewMap color={"#2E86C1"} rahuiBounds={geo_ref} />
         </div>
@@ -131,7 +129,6 @@ class DetailReo extends Component {
   }
 
   render() {
-    console.log(this.props)
     return this.props.rahui.length && this.renderDetail()
 
     // return this.props.rahui.length ? this.renderDetail() : this.renderLoading()

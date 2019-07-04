@@ -7,8 +7,6 @@ router.get('/', (req, res) => {
     .then(rahui => {
       let arr = []
 
-      console.log(rahui.length)
-
       while (rahui.length) {
         let firstEntry = rahui.shift()
 
@@ -50,7 +48,7 @@ router.get('/', (req, res) => {
 
   router.post('/', async (req, res) => {
     try{
-        console.log("req.body:", req.body)
+
         const rahuiData = req.body;
         const userId = rahuiData.userId
         const iwi = rahuiData.iwi
@@ -75,7 +73,6 @@ router.get('/', (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try{
-      console.log("this is req.body:", req.body)
       const rahuiData = req.body;
       const region = rahuiData.region
       const rahuiId = rahuiData.id;
@@ -100,8 +97,6 @@ router.put('/:id', async (req, res) => {
 
 router.post('/tautoko', async (req, res) => {
   try{
-      console.log("req.body:", req.body)
-
       const tautokoData = req.body;
       const rahuiId = tautokoData.rahui_id;
       const userId = tautokoData.user_id

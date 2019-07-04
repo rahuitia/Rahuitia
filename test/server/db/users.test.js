@@ -31,11 +31,6 @@ test("createUser - Inserts a single user", () => {
 
       expect(actual).toEqual(expected);
     });
-  // .then(() => {
-  //   return Promise.all([testDb('iwi').select(), testDb('hapu').select()]).then(data => {
-  //     console.log(data)
-  //   })
-  // });
 });
 
 test("getUsers - return users", () => {

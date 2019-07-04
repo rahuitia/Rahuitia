@@ -1,7 +1,6 @@
 import request from "superagent";
 
 export function getRahui() {
-  console.log(" API client is working");
   return request
     .get("/api/rahui")
     .then(res => {
