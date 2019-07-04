@@ -1260,83 +1260,81 @@ map {
     bottom: 0;
     left: 0;
     z-index: 130;
-}
+  }
 
-.aboutnav {
-  display: flex;
-  position: fixed;
-  width: 100vw;
-  bottom: calc(0vh - 2.1em);
-  /* bottom: 0; */
-  left: 0;
-  z-index: 100;
-}
+  .aboutnav {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    bottom: calc(0vh - 2.1em);
+    left: 0;
+    z-index: 100;
+  }
 
-.aboutHeading2 {
-  font-size: 2em;
-  padding-bottom: 0.5em;
-}
+  .aboutHeading2 {
+    font-size: 2em;
+    padding-bottom: 0.5em;
+  }
 
-.aboutBody {
-  font-size: 1.em;
-  line-height: 1.2em;
-}
+  .aboutBody {
+    font-size: 1.em;
+    line-height: 1.2em;
+  }
 
-.explore-button-selected {
- letter-spacing: .05em;
- padding: 0;
- border: none;
- border-radius: 0;
- background-color:#F1ECE8;
- color: #434734;
-}
-
-.explore-button-selected:hover {
+  .explore-button-selected {
+  letter-spacing: .05em;
+  padding: 0;
+  border: none;
+  border-radius: 0;
   background-color:#F1ECE8;
   color: #434734;
-}
+  }
 
-.explore-button-deselected {
-  letter-spacing: .05em;
-  padding-top: 1.7em;
-  padding-bottom: 1.7em;
-  padding-left: 0;
-  padding-right: 0;
-  border: none;
-  border-radius: 0;
-  background-color:#434734;
-  color: #F1ECE8;
- }
+  .explore-button-selected:hover {
+    background-color:#F1ECE8;
+    color: #434734;
+  }
 
- .explore-button-deselected:hover {
-  background-color:#525741;
-  color: #F1ECE8;
- }
+  .explore-button-deselected {
+    letter-spacing: .05em;
+    padding-top: 1.7em;
+    padding-bottom: 1.7em;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    border-radius: 0;
+    background-color:#434734;
+    color: #F1ECE8;
+  }
 
-.explore-toggle-button button{
-  width: 50vw;
-  letter-spacing: .08em;
-  font-size: .85em;
-  padding: 1.6em;
-  border: none;
-  border-radius: 0;
-}
+  .explore-button-deselected:hover {
+    background-color:#525741;
+    color: #F1ECE8;
+  }
 
-#project {
-  width: 45vw;
-  text-align: center;
-}
+  .explore-toggle-button button{
+    width: 50vw;
+    letter-spacing: .08em;
+    font-size: .85em;
+    padding: 1.6em;
+    border: none;
+    border-radius: 0;
+  }
 
-#team{
-  width: 30vw;
-  text-align: center;
-}
+  #project {
+    width: 45vw;
+    text-align: center;
+  }
 
-#API{
-  width: 25vw;
-  text-align: center;  
-}
+  #team{
+    width: 30vw;
+    text-align: center;
+  }
 
+  #API{
+    width: 25vw;
+    text-align: center;  
+  }
 
   .button-selected{
     color: #F1ECE8;
@@ -1394,43 +1392,43 @@ map {
     height: 75%;
     text-align: center;
     color: #F1ECE8;
-}
+  }
 
-.landingtext h3 {
-  /* mobile */
-  color: #F1ECE8;
-  padding-top: .7em;
-  font-size: .9em;
-  line-height: 1.2em;
-  text-shadow: 0 1px 0 #434734a6;
-}
+  .landingtext h3 {
+    /* mobile */
+    color: #F1ECE8;
+    padding-top: .7em;
+    font-size: .9em;
+    line-height: 1.2em;
+    text-shadow: 0 1px 0 #434734a6;
+  }
 
-.landingtext h1 {
-  color: #F1ECE8;
-  font-size: 1.9em;
-  text-shadow: 0 1px 0 #434734a6;
-}
+  .landingtext h1 {
+    color: #F1ECE8;
+    font-size: 1.9em;
+    text-shadow: 0 1px 0 #434734a6;
+  }
 
-.landing-arrow img {
-  width: 4em;
-  transform: scaleX(-1);
-  margin: 0 auto;
-} 
+  .landing-arrow img {
+    width: 4em;
+    transform: scaleX(-1);
+    margin: 0 auto;
+  } 
 
-.landing-arrow{
-   width: 5rem;
-   height: 5rem;
-   border-radius: 5em;
-   z-index: 201;
-   border: 2px solid #F1ECE8;
-   background: none;
-}
+  .landing-arrow{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5em;
+    z-index: 201;
+    border: 2px solid #F1ECE8;
+    background: none;
+  }
 
-.explore-waka {
-  width: 16em;
-}
+  .explore-waka {
+    width: 16em;
+  }
 
-.aboutContainer {
+  .aboutContainer {
     margin: 1.5em;
   }
 
@@ -1469,14 +1467,14 @@ map {
       width: 80vw;
     }
 
-  #mobile-background-image{
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    overflow: hidden;
-    display: flex;
-    align-items: center; 
-  }
+    #mobile-background-image{
+      height: 100vh;
+      width: 100vw;
+      object-fit: cover;
+      overflow: hidden;
+      display: flex;
+      align-items: center; 
+    }
 
   .koreroArea {
     /* height: 12rem; */
