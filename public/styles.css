@@ -410,14 +410,27 @@ button :active {
   transform: translate(-50%, -50%);
 } */
 
+.wholeform {
+  animation: .5s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .addDiv {
   /* width: 20rem; */
-  margin: 2rem 0 2rem 0;
+  margin: -1rem 0 2rem 0;
 }
 
 .addDiv2 {
   /* width: 20rem; */
-  margin: 1rem 0 3rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .addAuthDiv {
