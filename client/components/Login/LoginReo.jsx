@@ -23,7 +23,7 @@ class LoginReo extends Component {
     e.preventDefault()
     let { email, password } = this.state
     this.props.dispatch(loginUser({ email, password }))
-    window.location = `/#/explore`
+    window.location = `/#/explore/`
   }
 
   render() {
