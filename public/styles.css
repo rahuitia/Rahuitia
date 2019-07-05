@@ -244,10 +244,6 @@ a {
   ;
 }
 
-.addimage{
-  margin-top: 3em;
-  margin-bottom: 3em;
-}
 
 .mapthumbnail {
   border-radius: 50%;
@@ -414,14 +410,6 @@ button :active {
   animation: .8s ease-out 0s 1 fadeIn;
 }
 
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 
 @keyframes fadeIn {
   0% {
@@ -432,9 +420,27 @@ button :active {
   }
 }
 
+.stepOne {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  flex-direction: row;
+}
+
+.addimage{
+ float: right;
+}
+
 .addDiv {
   /* width: 20rem; */
   margin: -1rem 0 2rem 0;
+}
+
+.addDiv1 {
+  /* width: 20rem; */
+  width: 50%;
+  margin: auto;
+  float: left;
 }
 
 .addDiv2 {

@@ -245,14 +245,17 @@ class AddRahuiFormEng extends React.Component {
     }
 
     stepOne = () => {
-        return (<div>
-            <div className="addimage">
-                <img src="mapthumbnail.png" className="mapthumbnail"></img>
-            </div>
-            <div className="addDiv">
+        return (<div className="stepOne">
+            <div className="addDiv1">
                 <h2 className="step">step one</h2>
                 <p className="stepInfo">Zoom into an area on the map and draw an outline for where you want to place the rāhui.</p>
             </div>
+            <div className="addimage">
+                <img src="mapthumbnail.png" className="mapthumbnail"></img>
+            </div>
+            
+
+            
         </div>)
       
     }
