@@ -1780,7 +1780,7 @@ module.exports = [
                 ]
             },
             {
-                "}Ngāti Rangi": [
+                "Ngāti Rangi": [
                     "Ngāi Tuhi Ariki",
                     "Ngāti Hīoi",
                     "Ngāti Parenga",
