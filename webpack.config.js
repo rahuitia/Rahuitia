@@ -1,18 +1,32 @@
 const path = require('path')
 
 module.exports = {
-  entry: ["@babel/polyfill",'./client/index.js'],
-  mode: 'development',
+  entry: './client/index.js',
+  mode: 'production',
   output: {
-    path: path.join(__dirname, 'public'),
+    path: __dirname + '/public',
     filename: 'bundle.js'
   },
   module: {
     rules: [
       {
-        loader: 'babel-loader',
         test: /\.jsx?$/,
-        exclude: path.join(__dirname, 'node_modules')
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader?limit=100000'
+      },
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader" // creates style nodes from JS strings
+        }, {
+          loader: "css-loader" // translates CSS into CommonJS
+        }, {
+          loader: "sass-loader?sourceMap" // compiles Sass to CSS
+        }]
       }
     ]
   },
