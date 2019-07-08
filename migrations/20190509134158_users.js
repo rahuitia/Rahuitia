@@ -5,8 +5,8 @@ exports.up = function(knex, Promise) {
     table.string('middle_name')
     table.string('last_name')
     table.string('address')
-    table.integer('password_hash')
-    table.integer('email')
+    table.string('password_hash')
+    table.text('email')
 
   })
   

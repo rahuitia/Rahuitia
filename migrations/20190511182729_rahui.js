@@ -2,17 +2,17 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable("rahui", table => {
     table.increments("id").primary();
-    table.string("user_id");
-    table.string("region");
-    table.string("iwi");
-    table.string("hapu");
-    table.string("authoriser");
-    table.string("description");
-    table.string("korero");
-    table.string("geo_ref");
+    table.integer("user_id");
+    table.text("region");
+    table.text("iwi");
+    table.text("hapu");
+    table.text("authoriser");
+    table.text("description");
+    table.text("korero");
+    table.text("geo_ref");
     table.string("date_placed");
     table.string("date_lifted");
-    table.string("contact")
+    table.text("contact")
   });
 };
 
