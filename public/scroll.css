@@ -1,0 +1,23 @@
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  
+  .slide {
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+  }
+  
+  .landing-background-image {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }

@@ -15,7 +15,7 @@ import Login from "./Login/Login";
 import Add from "./Add/FormAndMap";
 import Register from "./Register/Register";
 import Edit from "./Edit/EditFormAndMap";
-
+import Scroll from "./Scroll/Scroll"
 
 class App extends Component {
 
@@ -28,6 +28,7 @@ class App extends Component {
     <div>
       <Router>
         <Route path="/(.+)" render={(() => <Nav /> )}/>
+        <Route exact path="/scroll" component={Scroll} />
         <Route exact path="/explore" component={Explore} />
         <Route exact path="/" component={Landing} />
         <Route exact path="/about" component={About} />

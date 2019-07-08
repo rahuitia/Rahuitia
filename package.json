@@ -42,6 +42,7 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
+    "@fullpage/react-fullpage": "^0.1.14",
     "babel-loader": "^8.0.5",
     "bcrypt": "^3.0.6",
     "bootstrap": "^4.3.1",
