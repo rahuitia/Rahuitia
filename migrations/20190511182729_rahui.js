@@ -10,8 +10,8 @@ exports.up = function(knex, Promise) {
     table.string("description");
     table.string("korero");
     table.string("geo_ref");
-    table.integer("date_placed");
-    table.integer("date_lifted");
+    table.string("date_placed");
+    table.string("date_lifted");
     table.string("contact")
   });
 };
