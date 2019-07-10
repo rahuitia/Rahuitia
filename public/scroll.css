@@ -1,18 +1,14 @@
-.container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-  }
-  
-  .slide {
-    scroll-snap-align: start;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4rem;
-  }
-  
+.landing-scroll{
+  margin: 0;
+}
+
+.section-slide-landing {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: inline-block; 
+}
+
   .landing-background-image {
     height: 100vh;
     width: 100vw;
@@ -20,4 +16,39 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+  }
+
+  .detail-slide-text {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+
+  .landing-nav-explore-button {
+    position: fixed;
+    z-index: 200;
+    top: 2vh;
+    left: 50vw;
+    transform: translate(-50%, 0%);
+  }
+
+  .landing-nav-login-button {
+    position: fixed;
+    z-index: 200;
+    top: 50vh;
+    left: 0px;
+    transform: rotate(90deg);
+    text-align: center;
+  }
+
+  .landing-nav-register-button {
+    position: fixed;
+    z-index: 200;
+    top: 50vh;
+    right: 0px;
+    transform: rotate(270deg);
+    text-align: center;
   }

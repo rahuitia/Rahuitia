@@ -27,14 +27,14 @@ class App extends Component {
   return (
     <div>
       <Router>
-        <Route path="/(.+)" render={(() => <Nav /> )}/>
+        {/* <Route path="/(.+)" render={(() => <Nav /> )}/> */}
         <Route exact path="/scroll" component={Scroll} />
         <Route exact path="/explore" component={Explore} />
         <Route exact path="/" component={Landing} />
         <Route exact path="/about" component={About} />
         <Route exact path="/login/" component={Login} />
         <Route exact path="/AddRahui" component={Add} />
-        <Route exact path="/rahui/:id/edit" component={Edit}/>       
+        <Route exact path="/rahui/:id/edit" component={Edit}/>      
         <Route exact path="/rahui/:id" component={RahuiDetail} />
         <Route path="/register" component={Register} />
       </Router>
