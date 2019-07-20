@@ -42,7 +42,6 @@ class AddRahuiFormEng extends React.Component {
         this.renderHapu = this.renderHapu.bind(this)
         this.renderIwi = this.renderIwi.bind(this)
         this.submitAdd = this.submitAdd.bind(this)
-        this.stepOne = this.stepOne.bind(this);
 
     }
 

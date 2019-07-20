@@ -43,7 +43,7 @@ handleClick() {
         <li>{this.props.isAuthenticated ? <Link className="nav-links" to="#" onClick={this.handleSubmit}>Logout</Link> : <Link className="nav-links" to="/login/">Login</Link> }</li>
         <li><Link className="nav-links" to="/about/">About</Link></li>
         <li><Link className="nav-links" to="/explore/">Explore</Link></li>
-        <li><Link className="nav-links" to="/addrahui/">Add a Rāhui</Link></li>
+        <li>{isAuthenticated() ? <Link className="nav-links" to="/addrahui/">Add a Rāhui</Link> : <Link className="nav-links" to="/register">Register</Link>}</li>
       </ul>
       </div>
       </div>
