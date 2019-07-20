@@ -1,0 +1,119 @@
+.landing-scroll{
+  margin: 0;
+}
+
+.section-slide-landing {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: inline-block; 
+}
+.landing-slide-wrapper {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.section-slide-landing-main {
+  background-image: url("BackgroundLanding.jpg"); 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clip-text {
+  font-size: 20vw;
+  font-weight: light;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  /* Color fallback */
+  color: rgb(143, 142, 142);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all .3s ease-in;
+}
+
+.clip-text:hover {
+  letter-spacing: .003em;
+  font-size: 20.5vw;
+}
+
+  .landing-background-image {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .detail-slide-text {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+
+  .landing-mask-img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+
+  .detail-slide-text p {
+    color: rgb(198, 196, 196);
+    text-align: center;
+  }
+
+  .landing-button a {
+    text-decoration: none;
+    color: rgb(198, 196, 196);
+  }
+
+  .landing-nav-explore-button {
+    position: fixed;
+    z-index: 200;
+    top: 2vh;
+    left: 50vw;
+    transform: translate(-50%, 0%);
+  }
+
+  .landing-nav-login-button {
+    position: fixed;
+    z-index: 200;
+    top: 50vh;
+    left: 0px;
+    transform: rotate(90deg) translate(-50%,0px);
+    text-align: center;
+  }
+
+  .landing-nav-register-button {
+    position: fixed;
+    z-index: 200;
+    top: 50vh;
+    right: 0px;
+    transform: rotate(270deg) translate(50%,0px);
+    text-align: center;
+  }
+
+  .icon {
+
+  }
+
+  .down-icon {
+    
+  }

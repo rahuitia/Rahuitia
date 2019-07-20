@@ -1045,12 +1045,15 @@ map {
   display: inline-block
 }
 
+@media (min-width:50em){
+
 .aboutnav {
   position: fixed;
   top: 2.4em;
   left: 0;
   display: flex;
   width: 100vw;
+  height: 2.4em;
   background-color: none;
   margin-bottom: 2em;
   background: #F1ECE8;
@@ -1109,7 +1112,7 @@ map {
    border: none;
    /* color: #DC5757; */
   }
-
+}
 
 .aboutwrapper {
   width: 50vw;
@@ -1292,7 +1295,7 @@ map {
   position: fixed;
   width: 100vw;
   bottom: calc(0vh - 2.1em);
-  /* bottom: 0; */
+  bottom: 0;
   left: 0;
   z-index: 100;
 }
@@ -1473,7 +1476,7 @@ map {
   .overlayNewAbout {
     position: fixed;
     width: 100vw;
-    height: calc(100vh - 6.77em);
+    height: calc(100vh - 5.64em);
     top: 2.4em;
     left: 0;
     bottom: 0;

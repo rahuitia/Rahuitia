@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ProjectEng from './ProjectEng'
 import ProjectReo from './ProjectReo'
 import { connect } from 'react-redux'
-import SplitterLayout from 'react-splitter-layout';
 
 
 class Project extends Component {
