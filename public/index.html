@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Rāhuitia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-  <script type="text/javascript"
-  var api_key = ${process.env.NANZ_MAP_API_KEY};
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDY6eWTVLvpOoTI2JrH8Q0ycDSV3F2J5o&libraries=drawing">
-  </script> 
 
-  <link href="styles.css" rel="stylesheet" type="text/css"/>
-  <link href="nav-style.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" var api_key=${process.env.NANZ_MAP_API_KEY};
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDY6eWTVLvpOoTI2JrH8Q0ycDSV3F2J5o&libraries=drawing">
+    </script>
+
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link href="nav-style.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Rasa" rel="stylesheet">
-  <link href="splitter-styles.css" rel="stylesheet" type="text/css"/>
- 
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <link href="splitter-styles.css" rel="stylesheet" type="text/css" />
+
 </head>
+
 <body>
   <div id="app" class=" app-container"></div>
   <script src="bundle.js"></script>
 </body>
+
 </html>

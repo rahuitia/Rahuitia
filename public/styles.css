@@ -17,13 +17,15 @@ body {
 }
 
 p {
-  font-size: 1.17em;
+  /* font-size: 1.17em; */
+  font-size: 1em;
   line-height: 1.35em;
 }
 
 /* font styles */
 h1 {
   /* padding-bottom: 1.7em; */
+  /* font-family: 'Muli', sans-serif; */
   font-size: 2.2em;
   letter-spacing: .02em;
   line-height: 1.2em;
@@ -50,7 +52,8 @@ h2 {
   font-size: 1.8em;
   line-height:1em;
   color: #434734;
-  margin-top: 0px
+  margin-top: 0px;
+  /* font-family: 'Muli', sans-serif; */
 }
 
 h3 {
@@ -58,14 +61,16 @@ h3 {
   font-weight: bold;
   font-size: 1.5em;
   color: #434734;
+  /* font-family: 'Muli', sans-serif; */
 }
 
 
 p {
-  font-family: "Rasa";
+  /* font-family: "Rasa"; */
+  font-family: 'Muli', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.17em;
+  /* font-size: 1.17em; */
   line-height: 1.35em;
   color: #434734;
   padding: 0px;
@@ -265,6 +270,7 @@ button {
   font-size: 16px;
   text-transform: uppercase;
   font-family: "Rasa";
+  /* font-family: 'Muli', sans-serif; */
   /* background-color: #F1ECE8; */
 
   color: white;
@@ -662,7 +668,7 @@ img.toggleButton:hover {
   font-family: "Rasa";
   font-style: normal;
   font-weight: lighter;
-  font-size: .9em;
+  font-size: .7em;
   line-height: 1.35em;
   color: #656b50;
   padding-bottom: 2em;
@@ -804,7 +810,8 @@ map {
 }
 
 .step {
-  font-family: Rasa;
+  /* font-family: Rasa; */
+  font-family: 'Muli', sans-serif;
   font-weight: bold;
   font-size: 1.6em;
   line-height: 1em;
@@ -1542,6 +1549,8 @@ map {
 
 .rahui-text p {
   padding-top: 0.2rem;
+  font-family: 'Muli', sans-serif;
+
 }
 
 .gmnoprint a, .gmnoprint span {

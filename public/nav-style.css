@@ -15,7 +15,8 @@
 }
 
 .translate-icon a{
-  font-family: 'Rasa';
+  /* font-family: 'Rasa'; */
+  font-family: 'Muli', sans-serif;
   font-weight: 300;
   font-size: 1em;
   letter-spacing: .07em;
@@ -76,6 +77,8 @@
 }
 
 .nav-links {
+  /* font-family: 'Muli', sans-serif; */
+  /* font-size: 14px; */
     color: #F1ECE8;
     display: block;
     padding: .57em;
