@@ -21,12 +21,17 @@ class LoginEng extends Component {
   }
 
   submit(e) {
+
     e.preventDefault();
+
     let { email, password } = this.state
     this.props.dispatch(loginUser({ email, password }))
-    window.location = `/#/explore`
+    
+    window.location = `/#/explore/`;
+    
     // return <Redirect to='/explore' />
     // window.location.replace("/#/explore");
+    // window.history.pushState({urlPath:'/#/explore'},"",'explore')
   }
 
   render() {

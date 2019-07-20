@@ -41,7 +41,8 @@ class AddRahuiFormEng extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.renderHapu = this.renderHapu.bind(this)
         this.renderIwi = this.renderIwi.bind(this)
-        this.submitAdd = this.submitAdd.bind(this);
+        this.submitAdd = this.submitAdd.bind(this)
+        this.stepOne = this.stepOne.bind(this);
 
     }
 
@@ -159,9 +160,13 @@ class AddRahuiFormEng extends React.Component {
     renderStep2 = () => {
         return (
             <React.Fragment>
-            <div className="addDiv2">
+                 {/* <div className="addDiv2">
+                        <h2 className="step">step one ✓</h2>      
+                </div> */}
+            <div className="wholeform">
+                <div className="addDiv2">
                         <h2 className="step">step two</h2>
-                        <p className="stepInfo">Tell us more about the rāhui below.</p>
+                        {/* <p className="stepInfo">Tell us more about the rāhui below.</p> */}
                     </div>
 
                     <div className="addDiv">
@@ -245,7 +250,8 @@ class AddRahuiFormEng extends React.Component {
                     <div className="addDiv">
                     {this.props.coordinates.length > 0 && <button className="addButton" name="submit">Add Rāhui</button>} 
                     </div>
-                    </React.Fragment>
+             </div>
+            </React.Fragment>
         )
     }
     

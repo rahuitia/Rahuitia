@@ -12,15 +12,15 @@ const MapWithADrawingManager = compose(
   withProps({
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCDY6eWTVLvpOoTI2JrH8Q0ycDSV3F2J5o&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: < div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: window.innerHeight }} />,
-    mapElement: <div style={{ height: `170%`, width: `100%` }} />,
+    containerElement: <div className="map-container" />,
+    mapElement: <div style={{ height: `100%`, width: `100%` }} />,
   }),
   withScriptjs,
   withGoogleMap
 )(props =>
   <GoogleMap
     defaultZoom={6}
-    defaultCenter={new google.maps.LatLng({ lat: -47.892014, lng: 170.897149 })}
+    defaultCenter={new google.maps.LatLng({ lat: -40.543484, lng: 172.880926 })}
     defaultOptions={{
       disableDefaultUI: true,
       streetViewControl: false,
@@ -43,9 +43,9 @@ const MapWithADrawingManager = compose(
     <DrawingManager
       defaultDrawingMode={google.maps.drawing.OverlayType.POLYGON}
       defaultOptions={{
-        drawingControl: true,
+        drawingControl: false,
         drawingControlOptions: {
-          position: google.maps.ControlPosition.TOP_LEFT,
+          position: google.maps.ControlPosition.TOP_RIGHT,
           drawingModes: [
             // google.maps.drawing.OverlayType.CIRCLE,
             google.maps.drawing.OverlayType.POLYGON,
