@@ -184,7 +184,6 @@ class EditRahuiFormEng extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit} noValidate>
-                    {/* <div> */}
                     <div>
                         <h1>Edit Rāhui</h1>
                     </div>
@@ -198,33 +197,6 @@ class EditRahuiFormEng extends React.Component {
                         <p className="stepInfo">Edit details for this rāhui:</p>
                     </div>
 
-                    {/* <div className="dropdownboxedit">
-                        <p>Select region:</p>
-
-                        <select onChange={this.handleSelect}>
-                            {this.props.area.map(area => {
-                                return <option htmlFor="region">{area}</option>;
-                            })}
-                        </select>
-
-                        <br></br>
-                        <br></br>
-
-                        {<p>Select iwi:</p>}
-                        <select onChange={this.handleSelect2}>
-                            {this.state.regionSelected ? (this.renderIwi()) : <option disabled></option>}
-                        </select>
-
-                        <br></br>
-                        <br></br>
-
-                        {<p>Select hapū:</p>}
-                        <select onChange={this.handleSelect3}>
-                            {this.state.iwiSelected ? (
-                                this.renderHapu()
-                            ) : <option disabled></option>}
-                        </select>
-                    </div> */}
                     <div className="addDiv">
                         <p className="iwiHapu">Iwi and/or Hapū placing the rāhui:</p>
 

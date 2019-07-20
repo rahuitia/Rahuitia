@@ -1,9 +1,9 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
-// import ReactFullpage from '@fullpage/react-fullpage';
+import LandingSlide from './LandingSlide'
 import DetailSlide from './DetailSlide'
 import ScrollFullPage from './ScrollFullPage'
 import LandingNav from './LandingNav' 
+import Bounce from './Bounce'
 
 const text1 = "Te Kaupapa Rāhuiatia maps Māori knowledge and customs of kaitiakitanga of whenua, moana and tangata"
 
@@ -16,37 +16,13 @@ function Scroll() {
     <div className="landing-scroll">
       <LandingNav />
       <ScrollFullPage >
-          <DetailSlide image="BackgroundLanding.jpg" SlideText={text1} />
-          <DetailSlide image="BackgroundLanding.jpg" SlideText={text2}  />
-          <DetailSlide image="BackgroundLanding.jpg" SlideText={text3} />
+          <LandingSlide downIcon={<Bounce icon="blackarrow.svg"/>}/>
+          <DetailSlide image="BackgroundLanding.jpg" SlideText={text1} icon={""} downIcon={<Bounce icon="whitearrow.svg"/>} />
+          <DetailSlide image="BackgroundLanding.jpg" SlideText={text2} icon={""} downIcon={<Bounce icon="whitearrow.svg"/>} />
+          <DetailSlide image="BackgroundLanding.jpg" SlideText={text3} icon={""} />
       </ScrollFullPage>
     </div>
   )
 }
 
 export default Scroll
-
-
-
-// const Scroll = () => (
-//   <ReactFullpage
-//     render={({ state, fullpageApi }) => {
-//       return (
-//         <ReactFullpage.Wrapper>
-//             {/* <button onClick={() => fullpageApi.moveSectionDown()}>
-//               Click me to move down
-//             </button> */}
-//             <DetailSlide image="BackgroundLanding.jpg" />
-//             <DetailSlide image="BackgroundLanding.jpg" />
-//             <DetailSlide image="BackgroundLanding.jpg" />
-//             <DetailSlide image="BackgroundLanding.jpg" />
-//             <DetailSlide image="BackgroundLanding.jpg" />
-//             <DetailSlide image="BackgroundLanding.jpg" />
-//             <DetailSlide image="BackgroundLanding.jpg" />
-//         </ReactFullpage.Wrapper>
-//       );
-//     }}
-//   />
-// );
-
-// export default Scroll

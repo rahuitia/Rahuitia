@@ -27,8 +27,8 @@ class App extends Component {
   return (
     <div>
       <Router>
-        {/* <Route path="/(.+)" render={(() => <Nav /> )}/> */}
-        <Route exact path="/scroll" component={Scroll} />
+        <Route path="/(.+)" render={(() => <Nav /> )}/>
+        {/* <Route exact path="/scroll" component={Scroll} /> */}
         <Route exact path="/explore" component={Explore} />
         <Route exact path="/" component={Landing} />
         <Route exact path="/about" component={About} />

@@ -146,7 +146,16 @@ class AddRahuiFormReo extends React.Component {
         else (<option>No hapū</option>)
     }
 
-    renderForm = () => {
+    renderStep1 = () => {
+        return (
+            <React.Fragment>
+                <h2 className="step">Takahia Tetahi</h2>
+                    <p className="stepInfo">Tomo mai ki tetahi rohe i runga i te mahere me te tuhi i tetahi waahanga mo te wahi e hiahia ana koe ki te whakatakoto i te rahui.</p>
+            </React.Fragment>
+        )
+    }
+
+    renderStep2 = () => {
         return (
             <React.Fragment>
             <div className="addDiv2">
@@ -244,10 +253,9 @@ class AddRahuiFormReo extends React.Component {
                     <img src="mapthumbnail.png" className="mapthumbnail"></img>
                     </div>
                     <div className="addDiv">
-                        <h2 className="step">Takahia Tetahi</h2>
-                        <p className="stepInfo">Tomo mai ki tetahi rohe i runga i te mahere me te tuhi i tetahi waahanga mo te wahi e hiahia ana koe ki te whakatakoto i te rahui.</p>
+                    {this.props.coordinates.length == 0 && this.renderStep1()} 
+                    {this.props.coordinates.length > 0 && this.renderStep2()}   
                     </div>
-                    {this.props.coordinates.length > 0 && this.renderForm()}
                 </form>
                 <div className="spaceme" />
             </div >

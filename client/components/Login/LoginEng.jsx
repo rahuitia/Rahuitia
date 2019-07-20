@@ -22,7 +22,6 @@ class LoginEng extends Component {
 
   submit(e) {
     e.preventDefault();
-    e.stopImmediatePropagation();
     let { email, password } = this.state
     this.props.dispatch(loginUser({ email, password }))
     window.location = `/#/explore`
