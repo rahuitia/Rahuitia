@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux'
 import { loginUser, loginError } from '../../actions/login';
+// import { Redirect } from 'react-router-dom'
 
 class LoginEng extends Component {
   constructor(props) {
@@ -14,18 +15,23 @@ class LoginEng extends Component {
   }
 
   handleChange(e) {
-    console.log("changing")
     e.preventDefault()
     const { name, value } = e.target
-    this.setState({ [name]: value }, () => console.log(this.state));
+    this.setState({ [name]: value });
   }
 
   submit(e) {
-    console.log("submitting")
-    e.preventDefault()
+
+    e.preventDefault();
+
     let { email, password } = this.state
     this.props.dispatch(loginUser({ email, password }))
-    window.location = `/#/explore`
+    
+    window.location = `/#/explore/`;
+    
+    // return <Redirect to='/explore' />
+    // window.location.replace("/#/explore");
+    // window.history.pushState({urlPath:'/#/explore'},"",'explore')
   }
 
   render() {

@@ -9,7 +9,6 @@ function register (req, res, next) {
   // needs to match json date object keys supplied by client
   const { first_name, middle_name, last_name, iwi, hapu, address, email, password } = req.body
 
-  // console.log(first_name, middle_name, last_name, iwi, hapu, address, email, password)
 
   userExists(email)
     .then(exists => {

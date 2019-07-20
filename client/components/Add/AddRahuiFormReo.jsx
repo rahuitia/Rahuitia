@@ -145,20 +145,20 @@ class AddRahuiFormReo extends React.Component {
         }
         else (<option>No hapū</option>)
     }
-    render() {
+
+    renderStep1 = () => {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit} noValidate>
-                    <div>
-                        <h2>Tāpirihia he Rāhui</h2>
-                    </div>
+            <React.Fragment>
+                <h2 className="step">Takahia Tetahi</h2>
+                    <p className="stepInfo">Tomo mai ki tetahi rohe i runga i te mahere me te tuhi i tetahi waahanga mo te wahi e hiahia ana koe ki te whakatakoto i te rahui.</p>
+            </React.Fragment>
+        )
+    }
 
-                    <div className="addDiv">
-                        <h2 className="step">Takahia Tetahi</h2>
-                        <p className="stepInfo">Tomo mai ki tetahi rohe i runga i te mahere me te tuhi i tetahi waahanga mo te wahi e hiahia ana koe ki te whakatakoto i te rahui.</p>
-                    </div>
-
-                    <div className="addDiv2">
+    renderStep2 = () => {
+        return (
+            <React.Fragment>
+            <div className="addDiv2">
                         <h2 className="step">Takahia e Rua</h2>
                         <p className="stepInfo">Korero mai ki a matou te rahui. Ka tuhia enei korero ki te waa tirotiro.</p>
                     </div>
@@ -236,6 +236,25 @@ class AddRahuiFormReo extends React.Component {
 
                     <div className="addDiv">
                         <button name="submit">Tāpirihia te Rāhui</button>
+                    </div>
+                    </React.Fragment>
+        )
+    }
+
+
+    render() {
+        return (
+            <div>
+                <form onSubmit={this.handleSubmit} noValidate>
+                    <div>
+                        <h2>Tāpirihia he Rāhui</h2>
+                    </div>
+                    <div className="addimage">
+                    <img src="mapthumbnail.png" className="mapthumbnail"></img>
+                    </div>
+                    <div className="addDiv">
+                    {this.props.coordinates.length == 0 && this.renderStep1()} 
+                    {this.props.coordinates.length > 0 && this.renderStep2()}   
                     </div>
                 </form>
                 <div className="spaceme" />

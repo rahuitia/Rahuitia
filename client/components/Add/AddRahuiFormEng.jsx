@@ -41,7 +41,8 @@ class AddRahuiFormEng extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.renderHapu = this.renderHapu.bind(this)
         this.renderIwi = this.renderIwi.bind(this)
-        this.submitAdd = this.submitAdd.bind(this);
+        this.submitAdd = this.submitAdd.bind(this)
+        this.stepOne = this.stepOne.bind(this);
 
     }
 
@@ -144,24 +145,28 @@ class AddRahuiFormEng extends React.Component {
         }
         else (<option>No hapū</option>)
     }
-    render() {
+
+    renderStep1 = () => {
         return (
-            <div
-            // className="addFormContainer"
-            >
-                <form onSubmit={this.handleSubmit} noValidate>
-                    <div>
-                        <h2>Add a Rāhui</h2>
-                    </div>
+            <React.Fragment>
+                <h2 className="step">step one</h2>
+                <p className="stepInfo">
+                    Zoom into an area on the map and draw an outline for where you want to place the rāhui.
+                </p>
+            </React.Fragment>
+        )
+    }
 
-                    <div className="addDiv">
-                        <h2 className="step">step one</h2>
-                        <p className="stepInfo">Zoom into an area on the map and draw an outline for where you want to place the rāhui.</p>
-                    </div>
-
-                    <div className="addDiv2">
+    renderStep2 = () => {
+        return (
+            <React.Fragment>
+                 {/* <div className="addDiv2">
+                        <h2 className="step">step one ✓</h2>      
+                </div> */}
+            <div className="wholeform">
+                <div className="addDiv2">
                         <h2 className="step">step two</h2>
-                        <p className="stepInfo">Tell us more about the rāhui below.</p>
+                        {/* <p className="stepInfo">Tell us more about the rāhui below.</p> */}
                     </div>
 
                     <div className="addDiv">
@@ -243,7 +248,28 @@ class AddRahuiFormEng extends React.Component {
                     </div>
 
                     <div className="addDiv">
-                        <button className="addButton" name="submit">Add Rāhui</button>
+                    {this.props.coordinates.length > 0 && <button className="addButton" name="submit">Add Rāhui</button>} 
+                    </div>
+             </div>
+            </React.Fragment>
+        )
+    }
+    
+    render() {
+        return (
+            <div
+            // className="addFormContainer"
+            >
+                <form onSubmit={this.handleSubmit} noValidate>
+                    <div>
+                        <h2>Add a Rāhui</h2>
+                    </div>
+                    <div className="addimage">
+                    <img src="mapthumbnail.png" className="mapthumbnail"></img>
+                    </div>
+                    <div className="addDiv">
+                    {this.props.coordinates.length == 0 && this.renderStep1()}
+                    {this.props.coordinates.length > 0 && this.renderStep2()}    
                     </div>
                 </form>
                 <div className="spaceme" />
@@ -260,3 +286,4 @@ const mapStateToProps = state => {
     }
 }
 export default connect(mapStateToProps)(AddRahuiFormEng);
+

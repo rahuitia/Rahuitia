@@ -14,18 +14,16 @@ class LoginReo extends Component {
   }
 
   handleChange(e) {
-    console.log("changing")
     e.preventDefault()
     const { name, value } = e.target
-    this.setState({ [name]: value }, () => console.log(this.state));
+    this.setState({ [name]: value });
   }
 
   submit(e) {
-    console.log("submitting")
     e.preventDefault()
     let { email, password } = this.state
     this.props.dispatch(loginUser({ email, password }))
-    window.location = `/#/explore`
+    window.location = `/#/explore/`
   }
 
   render() {

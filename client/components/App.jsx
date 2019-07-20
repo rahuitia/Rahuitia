@@ -12,33 +12,25 @@ import Login from "./Login/Login";
 import Add from "./Add/FormAndMap";
 import Register from "./Register/Register";
 import Edit from "./Edit/EditFormAndMap";
-
+import Scroll from "./Scroll/Scroll"
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     page:null
-  //   }
-  // }
 
   componentDidMount() {
     this.props.dispatch(fetchAllRahui())
   }
 
   render() { 
-  let page = this.props;
-  console.log(page)
   return (
     <div>
       <Router>
-        <Route exact path="/" component={Landing} />
         <Route path="/(.+)" render={(() => <Nav /> )}/>
+        <Route exact path="/explore" component={Explore} />
+        <Route exact path="/" component={Landing} />
         <Route exact path="/about" component={About} />
         <Route exact path="/login/" component={Login} />
         <Route exact path="/AddRahui" component={Add} />
         <Route exact path="/rahui/:id/edit" component={Edit}/>      
-        <Route exact path="/explore" component={Explore} />
         <Route exact path="/rahui/:id" component={RahuiDetail} />
         <Route path="/register" component={Register} />
       </Router>

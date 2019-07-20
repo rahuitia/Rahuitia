@@ -244,6 +244,15 @@ a {
   ;
 }
 
+.addimage{
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.mapthumbnail {
+  border-radius: 50%;
+  width: 12em;
+}
 /* button styles */
 
 
@@ -326,16 +335,14 @@ button :active {
    border: none;
    color: #F1ECE8;
    transition: all .2s ease-in;
- }
-
- .backToList img:hover{
-  width: 2.5em;
-  transform: translate(-50%, -50%) rotate(90deg);;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
  }
 
 .backToList:hover {
   border-style: none;
   background: rgb(177, 181, 144);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 3px 2px rgba(0,0,0,0.24);
 }
 
 .descriptionDetail {
@@ -403,14 +410,27 @@ button :active {
   transform: translate(-50%, -50%);
 } */
 
+.wholeform {
+  animation: .5s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .addDiv {
   /* width: 20rem; */
-  margin: 2rem 0 2rem 0;
+  margin: -1rem 0 2rem 0;
 }
 
 .addDiv2 {
   /* width: 20rem; */
-  margin: 1rem 0 3rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .addAuthDiv {
@@ -511,8 +531,8 @@ img.toggleButton:hover {
 
 /* button styles */
 .aboutbody {
-  margin-top: 3em;
-  border-bottom: .09em solid #95a16e;
+  margin-top: 5.9em;
+  border-bottom: .05em solid #95a16e;
 
 }
 
@@ -758,7 +778,9 @@ select {
 }
 
 
-
+button.addButton {
+  width: 100%;
+}
 
 .iwiHapuButton:hover {
   color: white;
@@ -1023,17 +1045,40 @@ map {
   display: inline-block
 }
 
+@media (min-width:50em){
+
 .aboutnav {
+  position: fixed;
+  top: 2.4em;
+  left: 0;
   display: flex;
-  width: 100%;
+  width: 100vw;
+  height: 2.4em;
   background-color: none;
   margin-bottom: 2em;
-  border-bottom: .09em solid #95a16e;
-  /* justify-content: space-between; */
+  background: #F1ECE8;
+  border-bottom: .05em solid #95a16e;
+  opacity: .9;
 }
 
 .aboutnav button {
-  font-size: .95em;
+  font-size: 1em;
+  padding: .8em;
+}
+
+#project {
+  width: 33.33%;
+  text-align: center;
+}
+
+#team{
+  width: 33.33%;
+  text-align: center;
+}
+
+#API{
+  width: 33.33%; 
+  text-align: center; 
 }
 
 .explore-button-selected {
@@ -1067,7 +1112,7 @@ map {
    border: none;
    /* color: #DC5757; */
   }
-
+}
 
 .aboutwrapper {
   width: 50vw;
@@ -1250,7 +1295,7 @@ map {
   position: fixed;
   width: 100vw;
   bottom: calc(0vh - 2.1em);
-  /* bottom: 0; */
+  bottom: 0;
   left: 0;
   z-index: 100;
 }
@@ -1306,19 +1351,21 @@ map {
 }
 
 #project {
-  width: 26vw;
+  width: 45vw;
+  text-align: center;
+  font-size: .7em;
 }
 
 #team{
-  width: 22vw;
+  width: 30vw;
+  text-align: center;
+  font-size: .7em;
 }
 
 #API{
-  width: 19vw;  
-}
-
-#resources{
-  width: 33vw;
+  width: 25vw;
+  text-align: center; 
+  font-size: .7em; 
 }
 
 
@@ -1429,7 +1476,7 @@ map {
   .overlayNewAbout {
     position: fixed;
     width: 100vw;
-    height: calc(100vh - 6.77em);
+    height: calc(100vh - 5.64em);
     top: 2.4em;
     left: 0;
     bottom: 0;

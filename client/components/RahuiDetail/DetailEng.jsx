@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
 import { getUserTokenInfo } from '../../utils/auth'
 import NewMap from '../NewMap'
-import TautokoEng from "../Tautoko/TautokoEng"
 import { fetchAllRahui } from "../../actions/rahui";
 
 
@@ -38,7 +37,6 @@ class DetailEng extends Component {
   }
 
   userId = () => {
-    console.log("One:", getUserTokenInfo() !== null ? getUserTokenInfo().user_id : 0)
     return getUserTokenInfo() !== null ? getUserTokenInfo().user_id : 0
   }
 
@@ -47,7 +45,7 @@ class DetailEng extends Component {
 
     return (
       <React.Fragment>
-        <button className="backToList" onClick={this.handleClickExplore.bind(this)}><img src="expand.svg"/></button>
+        <button className="backToList" onClick={this.handleClickExplore.bind(this)}><img src="arrow.png"/></button>
         <div className="mapBackground" style={this.state.visibility == "map" ? { zIndex: 81 } : { zIndex: 71 }}>
           <NewMap color={"#2E86C1"} rahuiBounds={geo_ref} />
         </div>
@@ -130,7 +128,6 @@ class DetailEng extends Component {
   }
 
   render() {
-    console.log(this.props)
     return this.props.rahui.length && this.renderDetail()
 
     // return this.props.rahui.length ? this.renderDetail() : this.renderLoading()

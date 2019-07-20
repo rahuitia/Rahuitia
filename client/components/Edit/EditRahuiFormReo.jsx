@@ -5,7 +5,7 @@ import { fetchAllIwi } from "../../actions/iwi";
 import { editRahui } from "../../apis/rahui"
 import { fetchAllRahui } from '../../actions/rahui'
 
-class EditRahuiFormReo extends React.Component {
+class EditRahuiFormEng extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -39,6 +39,7 @@ class EditRahuiFormReo extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
+        // nextProps.dispatch(fetchAllIwi())
 
         let rahuiId = nextProps.rahuiId;
 
@@ -182,114 +183,102 @@ class EditRahuiFormReo extends React.Component {
     render() {
         return (
             <div>
-                <form
-                    onSubmit={this.handleSubmit}
-                    noValidate
-                >
-                    <div className="editContainer">
+                <form onSubmit={this.handleSubmit} noValidate>
+                    {/* <div> */}
+                    <div>
                         <h1>Edit Rāhui</h1>
-                        <div className="step"> step one</div>
-                        <h2>Please zoom into an area on the map and draw an outline for where you want to place the rāhui.</h2>
-                        <hr></hr>
-                        <div className="step"> step two</div>
-                        <h2>Edit details for this rāhui:</h2>
+                    </div>
 
+                    <div className="addDiv">
+                        <h2 className="step">takahia tetahi</h2>
+                        <p className="stepInfo">Tomo mai ki tetahi rohe i runga i te mahere me te tuhi i tetahi waahanga mo te wahi e hiahia ana koe ki te whakatakoto i te rahui.</p>
+                    </div>
+                    <div className="addDiv2">
+                        <h2 className="step">takahia e rua</h2>
+                        <p className="stepInfo">Whakatikahia nga taipitopito mo tenei rahui:</p>
+                    </div>
+                    <div className="addDiv">
+                        <p className="iwiHapu">Te iwi me te Hapū e whakatakoto ana i te rahui:</p>
 
-                        <br></br>
-                        <div className="dropdownboxedit">
-                            <p>Select region:</p>
-
+                        <div className="addDiv">
+                            <p className="detailsHeading">Tīpako rohe:</p>
                             <select onChange={this.handleSelect}>
+                                {this.state.regionSelected == null && <option>Choose region</option>}
                                 {this.props.area.map(area => {
                                     return <option htmlFor="region">{area}</option>;
                                 })}
                             </select>
+                        </div>
 
-                            <br></br>
-                            <br></br>
-
-                            {<p>Select iwi:</p>}
+                        <div className="addDiv">
+                            <p className="detailsHeading">Tīpako iwi:</p>
                             <select onChange={this.handleSelect2}>
-                                {this.state.regionSelected ? (this.renderIwi()) : <option disabled></option>}
+                                {this.state.iwiSelected == null && <option>Choose iwi</option>}
+                                {this.state.regionSelected ? (this.renderIwi()) : <option></option>}
                             </select>
+                        </div>
 
-                            <br></br>
-                            <br></br>
-
-                            {<p>Select hapū:</p>}
+                        <div className="addDiv">
+                            <p className="detailsHeading">Tīpako hapū:</p>
                             <select onChange={this.handleSelect3}>
+                                {this.state.hapuSelected == null && <option>Choose hapū</option>}
                                 {this.state.iwiSelected ? (
                                     this.renderHapu()
-                                ) : <option disabled></option>}
+                                ) : <option></option>}
                             </select>
                         </div>
-                        <br></br>
-                        {/* <br></br> */}
+                    </div>
 
-                        <div>
-                            <div className="selectediwiedit">
-                                {/* <p>region:{this.state.region.map(region => { return <p>{region}, </p> })}</p> */}
-                                iwi:{this.state.iwi.map(iwi => { return <p>{iwi}, </p> })}<br></br>
-                                hapū:
-                                {this.state.hapu.map(hapu => { return <p>{hapu}</p> })}<br></br>
-                            </div >
-                        </div>
-                        <br></br>
-                        <button className="addAnotherButton" type="button" onClick={this.submitAdd}>Add another associated region/iwi/hāpu</button>
-                        <button className="registerButton1" type="button" onClick={this.resetIwiHapu}>Reset iwi/hapū</button>
-                        <br></br>
+                    <div className="addDiv">
+                        <button className="addButton" type="button" onClick={this.submitAdd}>Tāpirihia tētahi atu rohe / iwi / hapu e whai pānga ana</button>
+                    </div>
+
+                    <div className="addDiv">
+                        <button className="addButton" type="button" onClick={this.resetIwiHapu}>Whakahokia nga iwi / hapū</button>
+                    </div>
+
+                    <div className="yourWhakapapa">
+                        <p className="subHeading">Iwi:</p> {this.state.iwi.map(iwi => { return <p>{iwi}, </p> })}
+                        <p className="subHeading">Hapū:</p> {this.state.hapu.map(hapu => { return <p>{hapu}</p> })}
+                    </div >
+
+
+
+
+                    <div className="addAuthDiv">
+                        <p className="detailsHeading">Kua whakaaetia e:</p>
+                        <input placeholder="authoriser's name" name="authoriser" type="text" placeholder={this.state.authoriser} noValidate onChange={this.handleChange} />
+                    </div>
+
+                    <div className="addDiv">
+                        <p>I whakaturia te rahūi ra:</p>
+                        <input name="datePlaced" type="date" noValidate onChange={this.handleChange} />
+                    </div>
+
+                    <div className="addDiv">
+                        <p>I whakanuia te rahūi:</p>
+                        <input name="dateLifted" type="date" noValidate onChange={this.handleChange} />
                     </div>
 
 
-
-                    <p>Please enter the name of the person who has authorised the rahūi:</p>
-
-                    <input placeholder="authoriser" name="authoriser" type="text" placeholder={this.state.authoriser} noValidate onChange={this.handleChange} />
-
-                    <br></br>
-                    {/* <br></br>
-
-                    <p>Please enter your name:</p>
-
-                    <input name="submittersName" type="text" placeholder="Submitted by" />
-
-                    <br></br> */}
-                    <br></br>
-
-
-                    <p>Date rahūi placed:</p>
-                    <input name="datePlaced" type="date" noValidate onChange={this.handleChange} />
-
-                    <br></br>
-                    <br></br>
-
-
-                    <p>Date rahūi lifted:</p>
-                    <input name="dateLifted" type="date" noValidate onChange={this.handleChange} />
-
-                    <br></br>
-                    <br></br>
-
-                    <p>Please add a brief description of the rahūi here:</p>
-
-                    <textarea placeholder="description" name="description" type="text" value={this.state.description} rows="10" cols="60" noValidate onChange={this.handleChange} />
-
-                    <br></br>
-                    <br></br>
-
-                    <p>Please add further details of the rahūi here:</p>
-
-                    <textarea placeholder="korero" name="korero" type="text" value={this.state.korero} rows="20" cols="60" noValidate onChange={this.handleChange} />
-
-                    <br></br>
-
-                    <p>Please enter contact details here:</p>
+                    <div className="addDiv">
+                        <p className="detailsHeading">He whakamārama poto o te rahūi:</p>
+                        <textarea className="descriptionArea" placeholder="description" name="description" type="text" value={this.state.description} rows="10" cols="60" noValidate onChange={this.handleChange} />
+                    </div>
                     
-                    <input name="contact" type="text" value={this.state.contact}  noValidate onChange={this.handleChange} />
+                    <div className="addDiv">
+                        <p className="detailsHeading">Nga taipitopito o te rahūi:</p>
+                        <textarea className="koreroArea" placeholder="korero" name="korero" type="text" value={this.state.korero} rows="20" cols="60" noValidate onChange={this.handleChange} />
+                    </div>
 
-                    <br></br>
-                    <br></br>
-                    <button className="submitedit" name="submit">Submit edit</button>
+                    <div className="addDiv">
+                        <p className="detailsHeading">Ngā taipitopito whakapā:</p>
+                        <input name="contact" type="text" value={this.state.contact} noValidate onChange={this.handleChange} />
+                    </div>
+
+                    <div className="addDiv">
+                        <button className="addButton" name="submit">Whakatika Rahūi</button>
+                    </div>
                 </form>
             </div>
         )
@@ -305,4 +294,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(EditRahuiFormReo);
+export default connect(mapStateToProps)(EditRahuiFormEng);
