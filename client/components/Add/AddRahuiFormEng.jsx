@@ -37,11 +37,11 @@ class AddRahuiFormEng extends React.Component {
         this.handleSelect = this.handleSelect.bind(this);
         this.handleSelect2 = this.handleSelect2.bind(this);
         this.handleSelect3 = this.handleSelect3.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.renderHapu = this.renderHapu.bind(this)
-        this.renderIwi = this.renderIwi.bind(this)
-        this.submitAdd = this.submitAdd.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.renderHapu = this.renderHapu.bind(this);
+        this.renderIwi = this.renderIwi.bind(this);
+        this.submitAdd = this.submitAdd.bind(this);
 
     }
 
