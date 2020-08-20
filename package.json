@@ -44,7 +44,7 @@
     "@babel/preset-react": "^7.0.0",
     "@fullpage/react-fullpage": "^0.1.14",
     "babel-loader": "^8.0.5",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
